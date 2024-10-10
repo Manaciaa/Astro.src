@@ -1,0 +1,166 @@
+// Variables pour couleurs et tailles
+$color-gold: #ffd700;
+$color-gold-hover: #ffc107;
+$color-title: #ffff0791;
+$font-title: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+$font-description: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+$font-size-btn: 20px;
+$line-height-description: 50px;
+$btn-padding: 15px 30px;
+$transition-effect: 0.3s ease;
+$scale-hover: 1.05;
+
+// Styles globaux
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  // Première section
+  #home {
+    background-image: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0)),
+      url("../../public/assets/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   & .main_title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      color: black;
+
+      #first-description-section {
+        color: #000;
+        font-size: 50px;
+        margin: 50px;
+        line-height: $line-height-description;
+      }
+    }
+  }
+
+  // Deuxième section
+  #overview {
+    background-image: url("../../assets/er_overview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+   .presentation,
+    .video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+    }
+
+    .presentation {
+      flex-direction: column;
+    }
+  }
+
+  // Sections suivantes
+
+  .btn_buy {
+    font-size: $font-size-btn;
+    background-color: $color-gold;
+    color: #000;
+    border: 2px solid $color-gold;
+    padding: $btn-padding;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition:
+      background-color $transition-effect,
+      transform 0.2s ease;
+
+    &:hover {
+      background-color: $color-gold-hover;
+      transform: scale($scale-hover);
+    }
+  }
+
+  .section-content {
+    color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+
+    .title-section {
+      font-size: 40px;
+      margin-bottom: 50px;
+      color: $color-title;
+      font-family: $font-title;
+      display: flex;
+      justify-content: center;
+      margin: 50px;
+    }
+
+    .description-section,
+    .second_title {
+      font-size: 20px;
+      line-height: $line-height-description;
+      font-family: $font-description;
+    }
+
+    .second_title {
+      color: $color-title;
+    }
+  }
+
+  // Troisième section
+  #features {
+    background-image: url("../../assets/bg_4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .features {
+     .lore {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .description-section {
+        align-content: center;
+      }
+    }
+  }
+}
+
+// Quatrième section
+#GAMEPLAY {
+  background-image: url("../../assets/background3.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .Gameplay {
+    .open_world {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+#DLC {
+  background-image: url("../../assets/dlc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.dlc_title {
+  font-size: 30px;
+  font-family: $font-title;
+  text-align: center;
+  margin-top: 100px;
+}
